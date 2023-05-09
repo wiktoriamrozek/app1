@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Zdjęcia\icons8-documents-64.1.png" />
+    <None Remove="Zdjęcia\icons8-documents-64.png" />
+    <None Remove="Zdjęcia\icons8-export-64.png" />
+    <None Remove="Zdjęcia\icons8-file-100.png" />
+    <None Remove="Zdjęcia\icons8-file-26.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.DocToPDFConverter.Wpf" Version="19.3.0.48" />
+    <PackageReference Include="Syncfusion.Pdf.Wpf" Version="19.3.0.48" />
+    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="19.3.0.48" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="19.3.0.48" />
+    <PackageReference Include="Syncfusion.Themes.FluentLight.WPF" Version="19.3.0.48" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Zdjęcia\icons8-documents-64.1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Zdjęcia\icons8-documents-64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Zdjęcia\icons8-export-64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Zdjęcia\icons8-file-100.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

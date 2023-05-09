@@ -1,0 +1,70 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="WpfApp1.MainWindow"
+        x:Name="myMainWindow"
+        SizeChanged="myMainWindow_SizeChanged"
+        mc:Ignorable="d"
+        Icon="/Zdjęcia/icons8-documents-64.1.png"
+        Title="Convenient DOC Converter" Height="280" Width="500">
+
+    <Grid x:Name="myGrid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Column="1" Source="Zdjęcia/icons8-documents-64.png" Stretch="Fill"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" Height="60" Width="180" Margin="10, 10, 10, 10"
+            />
+
+        <Label Content="Convenient DOC Converter"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontWeight="Bold"
+               FontSize="16"
+               Foreground="#0096FF"
+               Height="32"
+               Width="212" Grid.Column="1" Grid.Row="1"
+            />
+        <syncfusion:ButtonAdv Content="ButtonAdv" HorizontalAlignment="Left" Height="35" Label="Select File" 
+                              Margin="10, 10, 10, 10" Grid.Row="2" VerticalAlignment="Top" Width="115"
+                              SmallIcon="Zdjęcia/icons8-file-100.png" Background="#0096FF" Foreground="White"
+                              FontSize="13" Click="SelectFile_Click" />
+
+        <TextBox x:Name="pathTexBox" Grid.Column="1" Grid.Row="2" TextWrapping="NoWrap" AcceptsReturn="False" 
+                  Margin="10, 10, 10, 10"
+                    />
+        
+        <syncfusion:ComboBoxAdv x:Name="conversionDropDown" AllowMultiSelect="False" DefaultText="Select" Grid.Column="2" 
+                                Margin="18,9,2,11" Grid.Row="2" Foreground="White" Background="#0096FF"
+                                FontSize="13" Width="115" Height="35"
+                                >
+            <syncfusion:ComboBoxItemAdv Content="   DOC to PDF" Foreground="Black"/>
+            <syncfusion:ComboBoxItemAdv Content="   PDF to DOC" Foreground="Black"/>
+            <syncfusion:ComboBoxItemAdv Content="   PNG to PDF" Foreground="Black"/>
+        </syncfusion:ComboBoxAdv>
+
+        <syncfusion:ButtonAdv Content="Convert" HorizontalAlignment="Center" Height="35" Label="Convert" 
+                              Margin="10, 10, 10, 10" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" Width="115"
+                              SmallIcon="Zdjęcia/icons8-export-64.png" Background="#0096FF" Foreground="White"
+                              FontSize="13"
+                              
+                              Click="ConvertButton_Click"
+                              />
+
+    </Grid>
+</Window>
